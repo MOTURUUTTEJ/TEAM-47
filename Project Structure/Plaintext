@@ -1,0 +1,8 @@
+classpulse/
+│
+├── backend/                # Python backend for data synchronization
+│   ├── main.py             # Entry point for the server
+│   ├── requirements.txt    # Python dependencies
+│
+└── ui/                     # Frontend Interface
+    └── index.html          # Main application file (Single-file architecture)
