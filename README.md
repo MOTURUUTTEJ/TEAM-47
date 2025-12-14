@@ -1,60 +1,200 @@
-# 🎓 ClassPulse AI
+---
 
-## 📖 Project Overview
+# 🚀 ClassPulse AI
 
-**ClassPulse AI** is a cutting-edge educational technology solution designed to optimize the lecture feedback loop. 
+### ACIS – Adaptive Classroom Intelligence System
 
-By leveraging **Edge AI (Local Large Language Models)** principles, the application transcribes and analyzes classroom audio in real-time. This ensures zero-latency performance and absolute data privacy. The system follows a **Hybrid Architecture**, processing data locally for immediate feedback while designed to sync structured insights to a cloud backend for long-term analytics.
+ClassPulse AI is an **AI-powered classroom intelligence platform** that transforms raw lectures into **structured notes, adaptive quizzes, flashcards, and learning insights**.
+It doesn’t just generate content — it **measures understanding and adapts teaching**.
+
+> **Tagline:** *From Classroom → Comprehension.*
 
 ---
 
-## 📉 The Problem Statement
+## 📌 Key Features
 
-Traditional classroom environments face significant technological and pedagogical challenges:
+* 🎙 **Lecture Input**
 
-* **⚠️ Connectivity Dependency:** Most AI tools require constant, high-speed internet, making them unreliable in remote or infrastructure-poor educational institutions.
-* **🔒 Data Privacy Concerns:** Institutions are hesitant to stream sensitive classroom audio to third-party APIs for processing.
-* **📉 Delayed Feedback Loops:** Instructors often lack immediate insight into student comprehension, realizing gaps in knowledge only after exams.
-* **🐌 Latency:** Cloud-based transcription often introduces lags that disrupt the flow of real-time interaction.
+  * Manual text, live mic, or uploaded content
+* 🧠 **AI-Generated Smart Notes**
+
+  * Clear summaries, key concepts, definitions, and examples
+* 📝 **Adaptive Quiz Engine**
+
+  * Automatically generated concept-checking questions
+* 📊 **Learning Gap Detection (ACIS)**
+
+  * Identifies weak concepts and misconceptions
+* 👨‍🏫 **Teacher Explanation Quality Scoring**
+
+  * Measures clarity, simplicity, and example usage
+* 🧩 **Flashcards & Revision Aids**
+
+  * Auto-generated from lecture content
+* ⚡ **Real-time UI Feedback**
+
+  * Loading animations, progress indicators, and alerts
+* 🌐 **API-First Architecture**
+
+  * Fully usable via REST APIs (Swagger friendly)
+* 🔌 **AI Flexibility**
+
+  * Works with **Gemini 2.5 Flash API**
+  * Optional **offline Nexa AI** support
 
 ---
 
-## ✨ Key Features
+## 🧠 System Architecture
 
-### 🛡️ Edge Intelligence (Offline Mode)
-* **Zero-Latency Transcription:** Utilizes the browser's native **Web Speech API** to transcribe lectures instantly.
-* **On-Device Analysis:** Designed to run quantized LLMs (e.g., Llama 3, Mistral) locally to generate summaries and quizzes without internet access.
-* **Data Sovereignty:** Audio data is processed entirely on the client machine; it never leaves the device.
+```
+Lecture Input (Text / Mic)
+        ↓
+Frontend (React + Tailwind UI)
+        ↓
+FastAPI Backend (API Layer)
+        ↓
+AI Engine (Gemini 2.5 Flash / Nexa Offline)
+        ↓
+ACIS Intelligence Layer
+        ↓
+Notes • Quizzes • Flashcards • Insights
+```
 
-### ☁️ Cloud Synchronization (Online Mode)
-* **Seamless Sync:** Architecture supports pushing structured data (lecture notes, quiz scores) to **Supabase/Firebase** when connectivity is restored.
-* **Role-Based Access:** Distinct portals for **Instructors** (analytics, management) and **Students** (quizzes, history).
-* **Long-Term Analytics:** Visualizes comprehension trends over the semester.
+**Core Principle:**
 
-### 🎨 User Experience
-* **Adaptive UI:** Dark-mode enabled, responsive interface built with **Tailwind CSS**.
-* **Multilingual Support:** Native support for **English (US/India)** and regional languages including **Hindi, Telugu, Tamil, Kannada, Spanish, French, and German**.
-* **Automated Assessment:** Instantly generates and grades 10-question multiple-choice quizzes based on the lecture content.
+> *Never trust raw LLM output — validate, structure, analyze, and adapt.*
 
 ---
 
-## 🛠️ Tech Stack
+## 📁 Project Structure
 
-| Component | Technology Used | Description |
-| :--- | :--- | :--- |
-| **Frontend** | html,css,js | Built using a lightweight single-file architecture via CDN for maximum portability. |
-| **Styling** | Tailwind CSS | Utility-first CSS framework for rapid, responsive UI design. |
-| **Speech Engine** | Web Speech API | Native browser API for real-time speech-to-text conversion. |
-| **Compiler** | Babel | In-browser JSX compilation. |
-| **Icons** | Lucide React | Clean, lightweight SVG icons. |
-| **Local AI** | Ollama (Integration Ready) | Runtime for running LLMs (Llama 3, Mistral) locally. |
+```
+classpulse/
+│
+├── backend/
+│   ├── main.py              # FastAPI backend
+│   ├── requirements.txt     # Python dependencies
+│
+├── ui/
+│   └── index.html           # React + Tailwind frontend
+│
+└── README.md
+```
+
+Minimal, clean, and hackathon-friendly.
+
+---
+
+## 🧰 Tech Stack
+
+### Frontend
+
+* React (via CDN)
+* Tailwind CSS
+* Vanilla JavaScript
+* HTML5
+* CSS Animations
+
+### Backend
+
+* FastAPI
+* Uvicorn
+* Pydantic
+
+### AI Layer
+
+* **Gemini 2.5 Flash API** (Cloud)
+* **Nexa AI (Offline, optional)**
 
 ---
 
 ## ⚙️ Installation & Setup
 
-This project uses a **Serverless/Buildless** architecture for the prototype, meaning you do not need `npm` or `node_modules` to run the interface.
+### 1️⃣ Clone the Repository
 
-### Prerequisites
-* A modern web browser (Google Chrome, Microsoft Edge, or Brave recommended for best Speech API support).
-* An internet connection (for the initial loading of CDN scripts).
+```bash
+git clone https://github.com/your-username/classpulse-ai.git
+cd classpulse-ai
+```
+
+### 2️⃣ Backend Setup
+
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
+
+### 3️⃣ Open in Browser
+
+```
+http://127.0.0.1:8000
+```
+
+✅ Frontend and backend are served together
+✅ No separate frontend server needed
+
+---
+
+## 🧩 ACIS Methodology
+
+**Adaptive Classroom Intelligence System**
+
+ACIS is the intelligence layer that differentiates ClassPulse AI from typical note-generation tools.
+
+### How ACIS Works:
+
+1. **Input Understanding** – Cleans and segments lecture text
+2. **Concept Extraction** – Identifies definitions, examples, and relationships
+3. **Cognitive Load Analysis** – Measures sentence complexity
+4. **Assessment Generation** – Creates adaptive quizzes
+5. **Understanding Scoring** – Calculates student comprehension
+6. **Misconception Detection** – Finds conceptual confusion
+7. **Adaptive Feedback** – Suggests revision or deeper explanation
+8. **Long-Term Memory** – Tracks weak topics across sessions
+
+> ACIS adapts teaching based on **learning outcomes**, not just content.
+
+---
+
+## 🚀 Future Roadmap
+
+* 📡 Real-time classroom dashboards
+* 👥 Multi-student analytics
+* 🔁 Automatic re-prompting on AI failures
+* 📈 Confidence score per concept
+* 🎥 Video explanation generation (Veo)
+* 📚 Slide generation (NotebookLM)
+* ⚙️ NPU-optimized offline inference
+* 🔗 LMS & EdTech integrations
+
+---
+
+## 🏆 Hackathon Details
+
+* **Project Name:** ClassPulse AI
+* **System Name:** ACIS – Adaptive Classroom Intelligence System
+* **Category:** Generative AI / EdTech
+* **Core Innovation:**
+
+  * Learning-adaptive intelligence, not static content generation
+
+### Judge-Ready One-Liner:
+
+> *“ClassPulse AI converts classroom lectures into adaptive learning experiences by analyzing not just what is taught, but how well it is understood.”*
+
+---
+
+## 👨‍💻 Author
+
+**Viswanath (Visw)**
+Student | AI & Future Technology Enthusiast
+Focus: AI systems, adaptive intelligence, and next-gen learning tools
+
+---
+
+## 📜 License
+
+This project is open-source and available under the **MIT License**.
+
+---
