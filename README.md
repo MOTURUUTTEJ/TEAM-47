@@ -7,7 +7,7 @@
 ClassPulse AI is an **AI-powered classroom intelligence platform** that transforms raw lectures into **structured notes, adaptive quizzes, flashcards, and learning insights**.
 It doesn’t just generate content — it **measures understanding and adapts teaching**.
 
-> **Tagline:** *From Classroom → Comprehension.*
+> *From Classroom → Comprehension.*
 
 ---
 
@@ -40,7 +40,7 @@ It doesn’t just generate content — it **measures understanding and adapts te
 * 🔌 **AI Flexibility**
 
   * Works with **Gemini 2.5 Flash API**
-  * Optional **offline Nexa AI** support
+  * Optional **offline Nexa AI, ollama AI** support
 
 ---
 
@@ -104,7 +104,7 @@ Minimal, clean, and hackathon-friendly.
 ### AI Layer
 
 * **Gemini 2.5 Flash API** (Cloud)
-* **Nexa AI (Offline, optional)**
+* **Nexa AI, ollama AI (Offline, optional)**
 
 ---
 
@@ -170,31 +170,6 @@ ACIS is the intelligence layer that differentiates ClassPulse AI from typical no
 
 ---
 
-## 🏆 Hackathon Details
-
-* **Project Name:** ClassPulse AI
-* **System Name:** ACIS – Adaptive Classroom Intelligence System
-* **Category:** Generative AI / EdTech
-* **Core Innovation:**
-
-  * Learning-adaptive intelligence, not static content generation
-
-### Judge-Ready One-Liner:
-
 > *“ClassPulse AI converts classroom lectures into adaptive learning experiences by analyzing not just what is taught, but how well it is understood.”*
-
----
-
-## 👨‍💻 Author
-
-**Viswanath (Visw)**
-Student | AI & Future Technology Enthusiast
-Focus: AI systems, adaptive intelligence, and next-gen learning tools
-
----
-
-## 📜 License
-
-This project is open-source and available under the **MIT License**.
 
 ---
