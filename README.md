@@ -81,7 +81,6 @@ classpulse/
 └── README.md
 ```
 
-Minimal, clean, and hackathon-friendly.
 
 ---
 
